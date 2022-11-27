@@ -8,7 +8,7 @@ vim.keymap.set('n', 's', '<Nop>')
 vim.keymap.set('n', 'Q', '<Cmd>q<CR>')
 
 -- -- save
-vim.keymap.set('n', 'W', '<Cmd>w<CR>')
+vim.keymap.set('n', 'S', '<Cmd>w<CR>')
 
 -- Command line
 -- -- move cursor

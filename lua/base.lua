@@ -26,3 +26,5 @@ vim.opt.autoread = true
 vim.bo.autoread = true
 
 vim.opt.list = true
+vim.opt.pumheight = 10
+
