@@ -15,3 +15,11 @@ if not status then
   print('Failed to set up colorscheme')
   return
 end
+
+local feline_status, feline = pcall(require, 'feline')
+if not feline_status then
+  print('Failed to require feline')
+  return
+end
+
+feline.setup()

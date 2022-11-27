@@ -1,6 +1,7 @@
 require('base')
 require('plugins')
-require('color')
+require('colorscheme')
 require('keymaps')
 require('nvim-cmp')
 require('lsp')
+--require('feline')
