@@ -18,7 +18,13 @@ end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
-mason.setup()
+mason.setup({
+  providers = {
+    'mason.providers.registry-api',
+    'mason.providers.client'
+  }
+})
+
 mason_lspconfig.setup({ ensure_installed = { 'sumneko_lua', 'clangd' } })
 mason_lspconfig.setup_handlers {
   function (server_name)

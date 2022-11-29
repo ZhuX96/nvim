@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
   use 'feline-nvim/feline.nvim'
+  use 'numToStr/Comment.nvim'
 
   if packer_bootstrap then
     require('packer').sync()

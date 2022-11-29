@@ -5,10 +5,10 @@ vim.g.mapleader = ' '
 vim.keymap.set('n', 's', '<Nop>')
 
 -- -- quit
-vim.keymap.set('n', 'Q', '<Cmd>q<CR>')
+vim.keymap.set('n', '<C-q>', '<Cmd>q<CR>')
 
 -- -- save
-vim.keymap.set('n', 'S', '<Cmd>w<CR>')
+vim.keymap.set('n', '<C-s>', '<Cmd>w<CR>')
 
 -- Command line
 -- -- move cursor
