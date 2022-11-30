@@ -25,8 +25,22 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
-  use 'feline-nvim/feline.nvim'
   use 'numToStr/Comment.nvim'
+  use {
+    'feline-nvim/feline.nvim',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+      'lewis6991/gitsigns.nvim'
+    }
+  }
+
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons'
+    }
+  }
+
 
   if packer_bootstrap then
     require('packer').sync()

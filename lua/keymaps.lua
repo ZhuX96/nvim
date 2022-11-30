@@ -5,10 +5,10 @@ vim.g.mapleader = ' '
 vim.keymap.set('n', 's', '<Nop>')
 
 -- -- quit
-vim.keymap.set('n', '<C-q>', '<Cmd>q<CR>')
+vim.keymap.set('n', '<Leader>q', '<Cmd>q<CR>')
 
 -- -- save
-vim.keymap.set('n', '<C-s>', '<Cmd>w<CR>')
+vim.keymap.set('n', '<Leader>w', '<Cmd>w<CR>')
 
 -- Command line
 -- -- move cursor
@@ -18,7 +18,6 @@ vim.keymap.set('c', '<C-p>', '<Up>')
 vim.keymap.set('c', '<C-n>', '<Down>')
 vim.keymap.set('c', '<C-b>', '<Left>')
 vim.keymap.set('c', '<C-f>', '<Right>')
-
 
 -- Window
 -- -- split the screens to up (horizontal), down (horizontal), left (vertical), right (vertical)
@@ -30,7 +29,7 @@ vim.keymap.set('n', 'sH', '<C-w>t<C-w>K')
 vim.keymap.set('n', 'sV', '<C-w>t<C-w>H')
 
 -- -- move cursor
-vim.keymap.set('n', '<Leader>w', '<C-w>w')
+vim.keymap.set('n', '<Leader>s', '<C-w>w')
 vim.keymap.set('n', '<Leader>h', '<C-w>h')
 vim.keymap.set('n', '<Leader>j', '<C-w>j')
 vim.keymap.set('n', '<Leader>k', '<C-w>k')
@@ -52,5 +51,5 @@ vim.keymap.set('n', 'tml', '<Cmd>+tabmove<CR>')
 
 -- Other
 -- -- terminal
-vim.keymap.set('n', '\\t', '<Cmd>set splitbelow<CR><Cmd>split<CR><Cmd>term<CR>')
+vim.keymap.set('n', '\\t', '<Cmd>set splitbelow<CR><Cmd>split<CR><Cmd>res -25<CR><Cmd>term<CR>')
 vim.keymap.set('t', '<C-n>', '<C-\\><C-n>')
