@@ -26,6 +26,8 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
   use 'numToStr/Comment.nvim'
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
   use {
     'feline-nvim/feline.nvim',
     requires = {
@@ -41,6 +43,20 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- remove nvim-macos/lib/nvim/parser
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  }
+
+  use ({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   if packer_bootstrap then
     require('packer').sync()
