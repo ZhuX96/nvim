@@ -33,7 +33,17 @@ mason_lspconfig.setup_handlers {
 
   ['clangd'] = function ()
     require('lspconfig').clangd.setup {
-      capabilities = capabilities
+      capabilities = capabilities,
+      cmd = {
+        'clangd',
+        '--background-index',
+        '-j=6',
+        '--all-scopes-completion',
+        '--completion-style=detailed',
+        '--function-arg-placeholders',
+        '--header-insertion=never',
+        '--pch-storage=disk',
+      }
     }
   end,
 
