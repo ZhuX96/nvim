@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
   use 'numToStr/Comment.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+  use 'ggandor/leap.nvim'
   use {
     'feline-nvim/feline.nvim',
     requires = {
