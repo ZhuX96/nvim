@@ -47,6 +47,18 @@ mason_lspconfig.setup_handlers {
     }
   end,
 
+  ['tsserver'] = function ()
+    require('lspconfig').tsserver.setup {
+      capabilities = capabilities,
+      init_options = {
+        preferences = {
+          importModuleSpecifierPreference = 'project-relative',
+          jsxAttributeCompletionStyle = 'none',
+        }
+      }
+    }
+  end,
+
   ['sumneko_lua'] = function ()
     require('lspconfig').sumneko_lua.setup {
       capabilities = capabilities,
