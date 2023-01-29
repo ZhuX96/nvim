@@ -21,13 +21,11 @@ nvim_tree.setup({
 
   actions = {
     open_file = {
-      resize_window = true
+      resize_window = true,
+      window_picker = { enable = true },
     },
   },
 
-  view = { mappings = { list = {
-    {key = { '<CR>', '<2-LeftMouse>' },                    action = 'tabnew' },
-  }}}
 })
 
 vim.keymap.set('n', '<Leader>e', '<Cmd>NvimTreeToggle<CR>')
