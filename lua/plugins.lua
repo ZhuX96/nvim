@@ -29,12 +29,16 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use 'ggandor/leap.nvim'
+  -- use {
+  --   'feline-nvim/feline.nvim',
+  --   requires = {
+  --     'nvim-tree/nvim-web-devicons',
+  --     'lewis6991/gitsigns.nvim'
+  --   }
+  -- }
   use {
-    'feline-nvim/feline.nvim',
-    requires = {
-      'nvim-tree/nvim-web-devicons',
-      'lewis6991/gitsigns.nvim'
-    }
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
   use {
