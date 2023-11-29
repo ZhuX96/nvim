@@ -29,13 +29,8 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use 'ggandor/leap.nvim'
-  -- use {
-  --   'feline-nvim/feline.nvim',
-  --   requires = {
-  --     'nvim-tree/nvim-web-devicons',
-  --     'lewis6991/gitsigns.nvim'
-  --   }
-  -- }
+  use 'lewis6991/gitsigns.nvim'
+  use {'akinsho/toggleterm.nvim', tag = '*'}
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }

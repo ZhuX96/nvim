@@ -6,5 +6,5 @@ end
 
 nvim_leap.add_default_mappings()
 
-vim.keymap.set({'n', 'x', 'o'}, 'q', '<Plug>(leap-forward-to)')
-vim.keymap.set({'n', 'x', 'o'}, 'Q', '<Plug>(leap-backward-to)')
+vim.keymap.set({'n', 'x', 'o'}, 'm', '<Plug>(leap-forward-to)')
+vim.keymap.set({'n', 'x', 'o'}, 'M', '<Plug>(leap-backward-to)')

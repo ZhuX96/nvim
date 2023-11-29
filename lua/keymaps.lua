@@ -3,6 +3,7 @@ vim.g.mapleader = ' '
 -- Basic mapping
 -- -- disable s
 vim.keymap.set('n', 's', '<Nop>')
+vim.keymap.set('n', 'q', '<Nop>')
 
 -- -- quit
 vim.keymap.set('n', '<Leader>q', '<Cmd>q<CR>')
@@ -51,5 +52,5 @@ vim.keymap.set('n', 'tml', '<Cmd>+tabmove<CR>')
 
 -- Other
 -- -- terminal
-vim.keymap.set('n', '\\t', '<Cmd>set splitbelow<CR><Cmd>split<CR><Cmd>res -25<CR><Cmd>term<CR>')
-vim.keymap.set('t', '<C-n>', '<C-\\><C-n>')
+vim.keymap.set('n', '\\\\t', '<Cmd>set splitbelow<CR><Cmd>split<CR><Cmd>res -25<CR><Cmd>term<CR>')
+vim.keymap.set('t', '<esc>', '<C-\\><C-n>')
