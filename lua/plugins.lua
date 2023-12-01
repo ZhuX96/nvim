@@ -38,9 +38,7 @@ return require('packer').startup(function(use)
 
   use {
     'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons'
-    }
+    requires = {'nvim-tree/nvim-web-devicons'}
   }
 
   -- remove nvim-macos/lib/nvim/parser
@@ -55,7 +53,12 @@ return require('packer').startup(function(use)
   use ({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = {'nvim-lua/plenary.nvim'}
+  }
+
+  use {
+    'nvimdev/dashboard-nvim',
+    requires = {'nvim-tree/nvim-web-devicons'}
   }
 
   if packer_bootstrap then
