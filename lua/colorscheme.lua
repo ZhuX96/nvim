@@ -1,6 +1,3 @@
-vim.opt.cursorline = true
-vim.opt.termguicolors = true
-
 vim.api.nvim_create_autocmd('TextYankPost',{
   callback = function()
     vim.highlight.on_yank {
@@ -10,9 +7,7 @@ vim.api.nvim_create_autocmd('TextYankPost',{
   end,
 })
 
-local status, _ = pcall(vim.cmd, 'colorscheme everforest')
-if not status then
-  print('Failed to set up colorscheme')
-  return
-end
+vim.g.everforest_diagnostic_line_highlight = 1
+vim.g.everforest_background = 'hard'
+vim.cmd('colorscheme everforest')
 

@@ -28,3 +28,6 @@ vim.bo.autoread = true
 vim.opt.list = true
 vim.opt.pumheight = 10
 
+vim.opt.background = 'dark'
+vim.opt.cursorline = true
+vim.opt.termguicolors = true
