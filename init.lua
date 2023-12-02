@@ -1,7 +1,7 @@
 require('base')
 require('plugins')
-require('colorscheme')
 require('keymaps')
+require('colorscheme')
 require('plugins.comment')
 require('plugins.nvim-cmp')
 require('lsp')
