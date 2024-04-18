@@ -5,8 +5,7 @@ if not treesitter_status then
 end
 
 treesitter.setup {
-  ensure_installed = {'c', 'cpp' },
-  ignore_install = { 'lua' },
+  ensure_installed = {'c', 'cpp', 'lua', 'go' },
   auto_install = true,
   highlight = {
     enable = true
