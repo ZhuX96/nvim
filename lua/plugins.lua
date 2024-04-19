@@ -62,6 +62,14 @@ return require('packer').startup(function(use)
   }
 
   use {"kylechui/nvim-surround", tag = '*'}
+  use {
+    'jay-babu/mason-nvim-dap.nvim',
+    requires = {
+      'williamboman/mason.nvim',
+      'mfussenegger/nvim-dap'
+    }
+  }
+  use 'leoluz/nvim-dap-go'
 
   if packer_bootstrap then
     require('packer').sync()
