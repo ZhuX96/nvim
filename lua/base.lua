@@ -14,6 +14,7 @@ vim.opt.incsearch = true
 vim.opt.mouse = "a"
 -- vim.opt.clipboard:append ("unnamedplus")
 
+-- ftplugin or autocmd
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
