@@ -62,6 +62,7 @@ return require('packer').startup(function(use)
   }
 
   use {"kylechui/nvim-surround", tag = '*'}
+
   use {
     'jay-babu/mason-nvim-dap.nvim',
     requires = {
@@ -69,6 +70,24 @@ return require('packer').startup(function(use)
       'mfussenegger/nvim-dap'
     }
   }
+
+  use {
+    'theHamsta/nvim-dap-virtual-text',
+    requires = {
+      'mfussenegger/nvim-dap',
+      'nvim-treesitter/nvim-treesitter',
+    }
+  }
+
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = {
+      'mfussenegger/nvim-dap',
+      'nvim-neotest/nvim-nio',
+      'folke/neodev.nvim'
+    }
+  }
+
   use 'leoluz/nvim-dap-go'
 
   if packer_bootstrap then
