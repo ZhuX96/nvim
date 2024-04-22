@@ -84,7 +84,6 @@ return require('packer').startup(function(use)
     requires = {
       'mfussenegger/nvim-dap',
       'nvim-neotest/nvim-nio',
-      'folke/neodev.nvim'
     }
   }
 
