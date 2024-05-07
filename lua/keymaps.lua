@@ -54,3 +54,6 @@ vim.keymap.set('n', 'tml', '<Cmd>+tabmove<CR>')
 -- -- terminal
 vim.keymap.set('n', '\\\\t', '<Cmd>set splitbelow<CR><Cmd>split<CR><Cmd>res -20<CR><Cmd>term<CR>')
 vim.keymap.set('t', '<esc>', '<C-\\><C-n>')
+
+-- lsp config keymaps
+-- dap config keymaps

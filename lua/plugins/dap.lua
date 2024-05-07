@@ -7,7 +7,7 @@ if not dap_status then
 end
 
 -- sharing launch.json with vscode
---[[ local dap_ext_vscode_status, dap_ext_vscode = pcall(require, 'dap.ext.vscode')
+local dap_ext_vscode_status, dap_ext_vscode = pcall(require, 'dap.ext.vscode')
 if not dap_ext_vscode_status then
   print('Failed to require nvim-dap vscode ext')
 end
@@ -21,7 +21,7 @@ dap.adapters.go = {
   }
 }
 
-dap_ext_vscode.load_launchjs() ]]
+dap_ext_vscode.load_launchjs()
 
 local mason_nvim_dap_status, mason_nvim_dap = pcall(require, 'mason-nvim-dap')
 if not mason_nvim_dap_status then
@@ -69,17 +69,23 @@ dapui.setup {
   },
 }
 
+vim.keymap.set('n', '<Leader>5', function() dap.continue() end)
+vim.keymap.set('n', '<Leader>9', function() require('dap').toggle_breakpoint() end)
+vim.keymap.set('n', '<Leader>0', function() require('dap').step_over() end)
+vim.keymap.set('n', '<Leader>-', function() require('dap').step_into() end)
+vim.keymap.set('n', '<Leader>=', function() require('dap').step_out() end)
+
 dap.listeners.before.attach.dapui_config = function()
   dapui.open()
 end
 dap.listeners.before.launch.dapui_config = function()
   dapui.open()
 end
-dap.listeners.before.event_terminated.dapui_config = function()
+--[[ dap.listeners.before.event_terminated.dapui_config = function()
   dapui.close()
 end
 dap.listeners.before.event_exited.dapui_config = function()
   dapui.close()
-end
+end ]]
 
 vim.keymap.set('n', '<Leader>du', dapui.toggle)
