@@ -30,7 +30,8 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-ts-autotag'
   use 'ggandor/leap.nvim'
   use 'lewis6991/gitsigns.nvim'
-  use {'akinsho/toggleterm.nvim', tag = '*'}
+  use 'akinsho/toggleterm.nvim'
+  use 'danymat/neogen'
   use {
     'nvim-tree/nvim-tree.lua',
     requires = { 'nvim-tree/nvim-web-devicons' },

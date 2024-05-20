@@ -25,7 +25,7 @@ mason.setup({
   }
 })
 
-mason_lspconfig.setup({ ensure_installed = { 'lua_ls', 'clangd', 'gopls' } })
+mason_lspconfig.setup({ ensure_installed = { 'lua_ls', 'clangd' } })
 mason_lspconfig.setup_handlers {
   function (server_name)
     require('lspconfig')[server_name].setup {}
@@ -78,7 +78,7 @@ mason_lspconfig.setup_handlers {
 
   ['gopls'] = function ()
     require('lspconfig').gopls.setup {
-      capabilities = capabilities,
+      capabilities = capabilities
     }
   end
 }
