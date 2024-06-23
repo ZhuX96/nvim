@@ -33,8 +33,7 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'akinsho/toggleterm.nvim'
   use 'danymat/neogen'
-  -- disable lint
-  -- use 'mfussenegger/nvim-lint'
+  use 'mfussenegger/nvim-lint'
   use {
     'nvim-tree/nvim-tree.lua',
     requires = { 'nvim-tree/nvim-web-devicons' },

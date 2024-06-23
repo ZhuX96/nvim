@@ -16,6 +16,12 @@ if not cmp_nvim_lsp_status then
   return
 end
 
+local lspconfig_status, lspconfig = pcall(require, 'lspconfig')
+if not lspconfig_status then
+  print('Failed to require lspconfig')
+  return
+end
+
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 mason.setup({
@@ -32,7 +38,7 @@ mason_lspconfig.setup_handlers {
   end,
 
   ['clangd'] = function ()
-    require('lspconfig').clangd.setup {
+    lspconfig.clangd.setup {
       capabilities = capabilities,
       cmd = {
         'clangd',
@@ -48,7 +54,7 @@ mason_lspconfig.setup_handlers {
   end,
 
   ['tsserver'] = function ()
-    require('lspconfig').tsserver.setup {
+    lspconfig.tsserver.setup {
       capabilities = capabilities,
       init_options = {
         preferences = {
@@ -60,7 +66,7 @@ mason_lspconfig.setup_handlers {
   end,
 
   ['lua_ls'] = function ()
-    require('lspconfig').lua_ls.setup {
+    lspconfig.lua_ls.setup {
       capabilities = capabilities,
       settings = {
         Lua = {
@@ -77,10 +83,19 @@ mason_lspconfig.setup_handlers {
   end,
 
   ['gopls'] = function ()
-    require('lspconfig').gopls.setup {
+    lspconfig.gopls.setup {
       capabilities = capabilities
     }
-  end
+  end,
+
+  ['rust_analyzer'] = function ()
+    lspconfig.rust_analyzer.setup {
+      capabilities = capabilities,
+      check = {
+        command = 'clippy',
+      }
+    }
+  end,
 }
 
 local opts = { noremap=true, silent=true }
