@@ -21,6 +21,24 @@ dap.adapters.go = {
   }
 }
 
+-- vscode codelldb extension
+-- the extensions has a bug which causes breakpoints are not working
+-- the lldb debugserver should be deleted
+dap.adapters.codelldb = {
+  type = 'server',
+  port = "${port}",
+  executable = {
+    command = os.getenv('HOME')..'/.vscode/extensions/vadimcn.vscode-lldb-1.10.0/adapter/codelldb',
+    args = {"--port", "${port}"},
+  }
+}
+
+-- nvim-dap uses 'type' field in launch.json to determine debugger
+-- vscode's navite launch.json, `type` should be lldb with codelldb extension
+-- to coordinate with nvim-dap, let's overwrite adapter.lldb
+-- TODO: gdb 14.0+ or lldb-dap
+dap.adapters.lldb = dap.adapters.codelldb
+
 dap_ext_vscode.load_launchjs()
 
 local mason_nvim_dap_status, mason_nvim_dap = pcall(require, 'mason-nvim-dap')
