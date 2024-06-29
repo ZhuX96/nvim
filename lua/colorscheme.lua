@@ -15,16 +15,16 @@ vim.g.everforest_diagnostic_line_highlight = 1
 -- vim.opt.background = "light"
 
 -- medium:  everforest
-vim.g.everforest_background = 'medium'
-vim.opt.background = "dark"
+-- vim.g.everforest_background = 'medium'
+-- vim.opt.background = "dark"
 
-vim.cmd('colorscheme everforest')
+-- vim.cmd('colorscheme everforest')
 
 -- light:   catppuccin-latte
 -- vim.cmd('colorscheme catppuccin-latte')
 
 -- medium:  catppuccin-macchiato
--- vim.cmd('colorscheme catppuccin-macchiato')
+vim.cmd('colorscheme catppuccin-macchiato')
 
 -- dark: catppuccin-mocha
 -- vim.cmd('colorscheme catppuccin-mocha')

@@ -33,6 +33,7 @@ nvim_tree.setup({
         },
       },
     },
+    root_folder_label = false,
   },
 
   actions = {
@@ -40,6 +41,10 @@ nvim_tree.setup({
       resize_window = true,
       window_picker = { enable = true },
     },
+  },
+
+  update_focused_file = {
+    enable = true,
   },
 
 })

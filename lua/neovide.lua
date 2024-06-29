@@ -1,8 +1,8 @@
 if vim.g.neovide then
   -- font
-  -- vim.o.guifont = 'JetbrainsMono Nerd Font:h14'
-  vim.o.guifont = 'JetbrainsMonoNL Nerd Font:h14'
-  -- vim.o.guifont = 'MesloLGS Nerd Font:h14'
+  -- vim.o.guifont = 'JetbrainsMono Nerd Font'
+  vim.o.guifont = 'JetbrainsMonoNL Nerd Font'
+  -- vim.o.guifont = 'MesloLGS Nerd Font'
 
   -- refresh rate
   vim.g.neovide_refresh_rate = 144
