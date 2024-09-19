@@ -3,6 +3,7 @@ if vim.g.neovide then
   -- vim.o.guifont = 'JetbrainsMono Nerd Font'
   vim.o.guifont = 'JetbrainsMonoNL Nerd Font'
   -- vim.o.guifont = 'MesloLGS Nerd Font'
+  vim.g.neovide_scale_factor = 0.83
 
   -- refresh rate
   vim.g.neovide_refresh_rate = 144
@@ -43,7 +44,7 @@ if vim.g.neovide then
   vim.api.nvim_set_keymap(
     't',
     '<D-v>',
-    '<C-R>+',
+    '<C-\\><C-n>"+p',
     { noremap = true, silent = true }
   )
   vim.api.nvim_set_keymap(
