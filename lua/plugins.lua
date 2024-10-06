@@ -89,8 +89,6 @@ return require('packer').startup(function(use)
   }
   use 'leoluz/nvim-dap-go'
 
-  use 'nvimdev/lspsaga.nvim'
-
   if packer_bootstrap then
     require('packer').sync()
   end
