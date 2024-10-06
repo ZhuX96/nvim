@@ -3,6 +3,8 @@ if vim.g.neovide then
   -- vim.o.guifont = 'JetbrainsMono Nerd Font'
   vim.o.guifont = 'JetbrainsMonoNL Nerd Font'
   -- vim.o.guifont = 'MesloLGS Nerd Font'
+
+  -- for extend display only
   vim.g.neovide_scale_factor = 0.83
 
   -- refresh rate

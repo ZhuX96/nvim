@@ -103,12 +103,19 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<Leader><Leader>q', vim.diagnostic.setloclist, opts)
 
+--[[ local telescope_builtin_status, telescope_builtin= pcall(require, 'telescope.builtin')
+if not telescope_builtin_status then
+  print('Failed to require telescope_builtin')
+  return
+end ]]
+
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local bufopts = { noremap = true, silent = true, buffer = args.buf}
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+    -- vim.keymap.set('n', 'gtr', telescope_builtin.lsp_references, bufopts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
     vim.keymap.set('n', 'gh', vim.lsp.buf.hover, bufopts)
     -- :LspRestart

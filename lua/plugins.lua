@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
   use 'akinsho/toggleterm.nvim'
   use 'danymat/neogen'
   use 'mfussenegger/nvim-lint'
+  use {"kylechui/nvim-surround", tag = '*'}
   use {
     'nvim-tree/nvim-tree.lua',
     requires = { 'nvim-tree/nvim-web-devicons' },
@@ -53,7 +54,7 @@ return require('packer').startup(function(use)
     end,
   }
 
-  use ({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
     requires = {'nvim-lua/plenary.nvim'}
@@ -64,7 +65,6 @@ return require('packer').startup(function(use)
     requires = {'nvim-tree/nvim-web-devicons'}
   }
 
-  use {"kylechui/nvim-surround", tag = '*'}
 
   use {
     'jay-babu/mason-nvim-dap.nvim',
@@ -73,7 +73,6 @@ return require('packer').startup(function(use)
       'mfussenegger/nvim-dap'
     }
   }
-
   use {
     'theHamsta/nvim-dap-virtual-text',
     requires = {
@@ -81,7 +80,6 @@ return require('packer').startup(function(use)
       'nvim-treesitter/nvim-treesitter',
     }
   }
-
   use {
     'rcarriga/nvim-dap-ui',
     requires = {
@@ -89,8 +87,9 @@ return require('packer').startup(function(use)
       'nvim-neotest/nvim-nio',
     }
   }
-
   use 'leoluz/nvim-dap-go'
+
+  use 'nvimdev/lspsaga.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
