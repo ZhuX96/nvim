@@ -34,7 +34,8 @@ return require('packer').startup(function(use)
   use 'akinsho/toggleterm.nvim'
   use 'danymat/neogen'
   use 'mfussenegger/nvim-lint'
-  use {"kylechui/nvim-surround", tag = '*'}
+  use {'kylechui/nvim-surround', tag = '*'}
+  use {'rmagatti/goto-preview'}
   use {
     'nvim-tree/nvim-tree.lua',
     requires = { 'nvim-tree/nvim-web-devicons' },
