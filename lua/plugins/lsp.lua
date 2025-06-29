@@ -120,7 +120,9 @@ return {
         },
       },
       setup = {
-        ["*"] = function(server, opts) end,
+        ["*"] = function(server, opts)
+          require("lspconfig")[server].setup(opts)
+        end,
       },
     }
     return ret
