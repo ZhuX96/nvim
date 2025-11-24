@@ -7,7 +7,7 @@
 <!-- REQUIREMENTS -->
 ## Requirements
 
-* Neovim v0.9.5+
+* Neovim v0.11.5+
 
 
 <!-- ACKNOWLEDGMENTS -->
