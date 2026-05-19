@@ -8,6 +8,16 @@ return {
       opts.servers = opts.servers or {}
 
       ----------------------------------------------------------------------
+      -- Python: basedpyright
+      ----------------------------------------------------------------------
+      opts.servers.basedpyright = vim.tbl_deep_extend("force", opts.servers.basedpyright or {}, {
+        root_dir = function(bufnr, on_dir)
+          local fname = vim.api.nvim_buf_get_name(bufnr)
+          on_dir(vim.fs.root(fname, { ".git", "pyrightconfig.json" }))
+        end,
+      })
+
+      ----------------------------------------------------------------------
       -- Lua: lua_ls
       ----------------------------------------------------------------------
       opts.servers.lua_ls = vim.tbl_deep_extend("force", opts.servers.lua_ls or {}, {
