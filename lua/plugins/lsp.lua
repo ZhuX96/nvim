@@ -9,13 +9,9 @@ return {
 
       ----------------------------------------------------------------------
       -- Python: basedpyright
+      -- Python: ruff
+      -- Enabled by lang.python through LazyExtras, see options.lua
       ----------------------------------------------------------------------
-      opts.servers.basedpyright = vim.tbl_deep_extend("force", opts.servers.basedpyright or {}, {
-        root_dir = function(bufnr, on_dir)
-          local fname = vim.api.nvim_buf_get_name(bufnr)
-          on_dir(vim.fs.root(fname, { ".git", "pyrightconfig.json" }))
-        end,
-      })
 
       ----------------------------------------------------------------------
       -- Lua: lua_ls
