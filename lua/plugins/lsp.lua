@@ -12,6 +12,21 @@ return {
       -- Python: ruff
       -- Enabled by lang.python through LazyExtras, see options.lua
       ----------------------------------------------------------------------
+      opts.servers.basedpyright = vim.tbl_deep_extend("force", opts.servers.basedpyright or {}, {
+        settings = {
+          basedpyright = {
+            analysis = {
+              -- all, strict, recommended, standard
+              typeCheckingMode = "recommended",
+              diagnosticSeverityOverrides = {
+                reportMissingTypeStubs = false,
+                -- reportUnknownMemberType = false,
+                -- reportUnknownVariableType = false,
+              },
+            },
+          },
+        },
+      })
 
       ----------------------------------------------------------------------
       -- Lua: lua_ls
